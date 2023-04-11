@@ -1,4 +1,4 @@
-* Conversão de Real(R$) para Dólar($) */
+/* Conversão de Real(R$) para Dólar($) */
 
 #include <stdio.h>
 #include <stdlib.h>
