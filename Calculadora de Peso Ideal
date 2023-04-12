@@ -1,0 +1,22 @@
+/* Calculadora de Peso Ideal */
+
+#include <stdio.h>
+
+int main()
+{
+    float h, pesoideal;
+    char sexo;
+    printf("Informe o seu sexo (f) feminino (m) masculino: ");
+    scanf("%c", &sexo);
+    printf("Digite sua altura: ");
+    scanf("%f", &h);
+    
+    if (sexo == 'f') 
+    {
+        pesoideal =((62.1*h)-44.7);
+        printf("seu peso ideal é: %.2f\n", pesoideal); 
+    } else {
+        pesoideal =((72.7*h)-58);
+        printf("seu peso ideal é: %.2f\n", pesoideal);}
+    return 0;
+}
