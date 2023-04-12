@@ -1,0 +1,20 @@
+/* Calculadora Online: Comprimento de uma Circunferência */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (void)
+
+{
+    float numero;
+    float multiplicação;
+    
+    printf("Digite o raio da circunferência");
+    scanf("%f", &numero);
+    
+    
+    multiplicação = 2 * 3.1416 * numero;
+    printf("O comprimento da circunferência é %.2f", multiplicação);
+    
+    return 0;
+}
