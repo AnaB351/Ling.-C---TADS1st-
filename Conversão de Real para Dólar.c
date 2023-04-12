@@ -7,15 +7,16 @@ int main (void)
 
 {
     float numero;
-float resp_multiplicacao;
+float resp_divisão;
     
     printf ("Digite um número");
     scanf("%f", &numero);
-     resp_multiplicacao = numero * 5.07;
-  printf("\n $%.2f", resp_multiplicacao);
+     resp_divisão = numero / 5.07;
+  printf("\n $%.2f", resp_divisão);
     
     return 0;
 }
+
 
 
 
