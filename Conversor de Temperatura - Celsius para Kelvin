@@ -1,0 +1,20 @@
+/* Conversor de Temperatura -> Celsius (C) para Kelvin */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (void)
+
+{
+    float numero;
+    float soma;
+    
+    printf("Digite a temperatura em Celsius");
+    scanf("%f", &numero);
+    
+    soma = numero + 273;
+    
+    printf("A temperatura em Kelvin é %.2f", soma);
+    
+    return 0;
+}
