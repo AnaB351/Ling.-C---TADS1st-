@@ -1,0 +1,20 @@
+/* Impar ou Par */
+
+#include <stdio.h>
+
+int main (void)
+{  
+  int numero;
+    printf ("Digite um número: ");
+    scanf ("%d", &numero);
+   
+   if((numero % 2)==0)
+   {
+      printf("numero %d é par.", numero);
+   } 
+   if((numero % 2)==1)
+   {
+       printf("número %d é ímpar.", numero);
+   }
+   return 0;
+}
