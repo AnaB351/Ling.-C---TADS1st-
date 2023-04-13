@@ -1,0 +1,14 @@
+/* Calcular a área de uma circunferência*/
+
+#include <stdio.h>
+
+int main(void)
+{
+    float numero, raio, área;
+    
+    printf("Digite o raio da circunferência: ");
+    scanf("%f", &raio);
+    área = (raio*raio) * 3.14;
+    printf(" o valor da área da circunferência é: %.2f", área);
+    return 0;
+}
