@@ -1,0 +1,18 @@
+/* Calcular I.M.C. */
+
+#include <stdio.h>
+
+int main ()
+{
+    float numero, P, h, IMC; /* P = peso // h = altura */
+    
+    printf ("Digite seu peso em kg: ");
+    scanf ("%f",&P);
+    printf ("Digite sua altura em metros: ");
+    scanf ("%f", &h);
+    IMC = P/(h*h);
+    printf ("Seu IMC é: %.2f\n\n", IMC);
+    
+    printf ("IMC de até:\n24.9 - Saudável;\n25 a 29.9 - Sobrepeso ou Pré-Obesidade;\n30 a 34.9 - Obesidade 1;\n35 a 39.9 - Obesidade 2;\n40 ou mais - Obesidade 3 (mórbida)\n");
+    return 0;
+}
