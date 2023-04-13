@@ -1,0 +1,16 @@
+/*Calcular salário atual baseando-se na taxa de correção do salário mínimo*/
+
+#include <stdio.h>
+
+int main(void)
+{
+    float numero, salário, taxa, montante;
+    
+    printf("Digite a taxa de correção em porcentagem: ");
+    scanf("%f", &taxa);
+    printf("Digite o valor do seu salário: ");
+    scanf("%f", &salário);
+    montante = taxa/100 * salário + salário;
+    printf("Seu novo salário é: %.2f", montante);
+    return 0;
+}
