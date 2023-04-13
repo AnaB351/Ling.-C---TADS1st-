@@ -4,11 +4,9 @@
 #include <stdlib.h>
 
 int main (void)
-
 {
     float numero;
-float resp_divisão;
-    
+float resp_divisão; 
     printf ("Digite um número");
     scanf("%f", &numero);
      resp_divisão = numero / 5.07;
