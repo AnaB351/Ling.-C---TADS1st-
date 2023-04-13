@@ -12,7 +12,8 @@ int main ()
     scanf("%f", &nota2);
     média = (nota1+nota2)/2;
 
-    if (média >= 7);{
+    if (média >= 7)
+    {
         printf("você está aprovado com média %.2f", média);
     } else {
         printf("você está reprovado com média %.2f", média);
