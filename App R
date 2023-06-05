@@ -1,0 +1,81 @@
+---
+title: "App do bilhão"
+output:
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+runtime: shiny
+---
+
+```{r setup_libraries, include=FALSE}
+# Dashboard
+library(flexdashboard)
+
+# Manipular as tabelas
+library(dplyr)
+
+# Gráficos
+library(ggplot2)
+library(plotly)
+
+# Pegar dados financeiros
+library(tidyquant)
+
+```
+Column {.sidebar}
+-----------------------------------------------------------------------
+```{r}
+selectInput(
+  "ticker",
+  "Escoha o ticket:",
+  choices= c("PETR4.SA","BBAS3.SA","VALE3.SA","WEGE3.SA")
+)
+```
+
+
+```{r download }
+dados_tbl <- reactive({
+  tq_get(input$ticker)
+})
+```
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Tabela
+```{r table}
+# renderTable({
+#   tq_get("WEGE3.SA")
+# })
+renderDataTable({
+dados_tbl()%>%
+  select(date,adjusted) %>%
+  arrange(desc(date))
+})
+```
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Gráfico de linha
+
+```{r Grafico de linha}
+renderPlotly(
+  dados_tbl()%>%
+  ggplot(aes(x=date,y=adjusted)) +
+  geom_line()
+)
+```
+
+### Gráfico de linha 2
+
+```{r}
+renderPlotly(
+  tq_get(c("PETR4.SA","BBAS3.SA","VALE3.SA","WEGE3.SA")) %>% 
+  group_by(symbol) %>% 
+  mutate(cotacao = (adjusted - mean(adjusted))/ sd( adjusted)) %>% 
+  ungroup() %>%  
+  ggplot(aes(x=date,y=cotacao, color = symbol)) +
+  geom_line()
+)
+```
