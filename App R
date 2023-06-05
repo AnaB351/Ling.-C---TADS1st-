@@ -1,5 +1,5 @@
 ---
-title: "App do bilhão"
+title: "App Ações BR"
 output:
   flexdashboard::flex_dashboard:
     orientation: columns
