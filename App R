@@ -8,17 +8,10 @@ runtime: shiny
 ---
 
 ```{r setup_libraries, include=FALSE}
-# Dashboard
 library(flexdashboard)
-
-# Manipular as tabelas
 library(dplyr)
-
-# Gráficos
 library(ggplot2)
 library(plotly)
-
-# Pegar dados financeiros
 library(tidyquant)
 
 ```
